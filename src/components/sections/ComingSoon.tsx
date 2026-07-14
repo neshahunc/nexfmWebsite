@@ -40,8 +40,6 @@ export function ComingSoon() {
 
             <p className="mt-8 max-w-xl text-sm leading-relaxed text-slate">
               Being built by real people—including{" "}
-              <span className="font-medium text-carbon">Lina</span> and{" "}
-              <span className="font-medium text-carbon">Bashar</span>—not a
               marketing department rewriting the same facilities playbook.
             </p>
           </div>
