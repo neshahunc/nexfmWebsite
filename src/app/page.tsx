@@ -1,6 +1,5 @@
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
-import { Belief } from "@/components/sections/Belief";
 import { Building } from "@/components/sections/Building";
 import { ComingSoon } from "@/components/sections/ComingSoon";
 import { Difference } from "@/components/sections/Difference";
@@ -17,7 +16,6 @@ export default function Home() {
         <Building />
         <Difference />
         <Join />
-        <Belief />
       </main>
       <Footer />
     </>

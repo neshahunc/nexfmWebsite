@@ -4,6 +4,7 @@ type LogoProps = {
   className?: string;
   size?: "sm" | "md" | "lg" | "hero";
   asLink?: boolean;
+  onDark?: boolean;
 };
 
 const sizeClasses = {
@@ -13,25 +14,34 @@ const sizeClasses = {
   hero: "text-5xl sm:text-7xl md:text-8xl tracking-[0.14em]",
 };
 
-function Mark({ className = "", size = "md" }: Omit<LogoProps, "asLink">) {
+function Mark({
+  className = "",
+  size = "md",
+  onDark = false,
+}: Omit<LogoProps, "asLink">) {
   return (
     <span
       className={`inline-block font-display font-semibold uppercase leading-none ${sizeClasses[size]} ${className}`}
     >
-      <span className="text-carbon">NEX</span>
+      <span className={onDark ? "text-white" : "text-carbon"}>NEX</span>
       <span className="text-teal">FM</span>
     </span>
   );
 }
 
-export function Logo({ className = "", size = "md", asLink = true }: LogoProps) {
+export function Logo({
+  className = "",
+  size = "md",
+  asLink = true,
+  onDark = false,
+}: LogoProps) {
   if (!asLink) {
-    return <Mark className={className} size={size} />;
+    return <Mark className={className} size={size} onDark={onDark} />;
   }
 
   return (
     <Link href="/" aria-label="NEXFM home">
-      <Mark className={className} size={size} />
+      <Mark className={className} size={size} onDark={onDark} />
     </Link>
   );
 }

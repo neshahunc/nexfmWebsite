@@ -127,6 +127,28 @@ body {
   }
 }
 
+@keyframes path-draw {
+  0% {
+    stroke-dasharray: 8 14;
+    stroke-dashoffset: 220;
+  }
+  100% {
+    stroke-dasharray: 8 14;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes bar-rise {
+  from {
+    transform: scaleY(0.35);
+    opacity: 0.4;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
 .animate-fade-up {
   animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -147,6 +169,31 @@ body {
 .animate-data-flow {
   stroke-dasharray: 12 8;
   animation: data-flow 2.8s linear infinite;
+}
+
+.animate-path-draw {
+  animation: path-draw 3.2s linear infinite;
+}
+
+.animate-bar-rise {
+  transform-origin: bottom;
+  animation: bar-rise 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes flow-nudge {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateX(4px);
+    opacity: 1;
+  }
+}
+
+.animate-flow-nudge {
+  animation: flow-nudge 1.8s ease-in-out infinite;
 }
 
 .delay-1 {

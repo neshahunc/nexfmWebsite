@@ -1,10 +1,11 @@
+import { AiSignal } from "../AiSignal";
+
 const items = [
   "Self Performed Facility Operations",
   "Trade Pathway Workforce Development Program",
   "Operational Intelligence Platform",
   "Asset Reliability and Maintenance Programs",
   "Energy and Sustainability Solutions",
-  "AI Driven Facility Insights",
   "Community Focused Career Development",
 ];
 
@@ -23,6 +24,10 @@ export function Building() {
             Not a vendor catalog. A company being built around people, craft,
             and outcomes that last.
           </p>
+        </div>
+
+        <div className="mt-12 sm:mt-14">
+          <AiSignal />
         </div>
 
         <ul className="mt-16 grid gap-0 border-t border-divider sm:grid-cols-2">
